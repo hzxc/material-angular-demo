@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-simple',
@@ -6,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./simple.component.scss']
 })
 export class SimpleComponent implements OnInit {
+
+  myControl: FormControl = new FormControl();
+
+  options = [
+    'One',
+    'Two',
+    'Three'
+  ];
 
   constructor() { }
 
