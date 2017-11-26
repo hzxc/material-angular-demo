@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SimpleComponent } from './simple/simple.component';
+import { AutocompleteComponent } from './autocomplete.component';
 
 const routes: Routes = [
   {
-    path: 'simple',
-    component: SimpleComponent
+    path: '',
+    component: AutocompleteComponent
   },
 ];
 
