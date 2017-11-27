@@ -6,6 +6,10 @@ const routes: Routes = [
     path: 'autocomplete',
     loadChildren: './autocomplete/autocomplete.module#AutocompleteModule',
   },
+  {
+    path: 'rxjs',
+    loadChildren: './rxjs-demo/rxjs-demo.module#RxjsDemoModule',
+  },
 ];
 
 @NgModule({
