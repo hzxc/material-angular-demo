@@ -6,6 +6,8 @@ import { MaterialModule } from '../shared/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OverviewComponent } from './overview/overview.component';
 import { AutocompleteComponent } from './autocomplete.component';
+import { SetDisplayValueComponent } from './set-display-value/set-display-value.component';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   imports: [
@@ -18,7 +20,9 @@ import { AutocompleteComponent } from './autocomplete.component';
   declarations: [
     SimpleComponent,
     OverviewComponent,
-    AutocompleteComponent
+    AutocompleteComponent,
+    SetDisplayValueComponent,
+    FilterComponent
   ]
 })
 export class AutocompleteModule { }
