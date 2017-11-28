@@ -1,8 +1,26 @@
-<mat-card>
-  <mat-form-field>
-    <span matPrefix>from &nbsp;</span>
-    <input disabled matInput [matDatepicker]="dp1" placeholder="Completely" >
-    <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
-    <mat-datepicker #dp1></mat-datepicker>
-  </mat-form-field>
-</mat-card>
+<form #dpFrom="ngForm" novalidate [formGroup]="dpGroup">
+  <mat-card>
+    <mat-form-field [ngClass]="{'datepicker-item-readonly': disabledState}">
+      <span matPrefix>from &nbsp;</span>
+      <input #dpInput1 [disabled]="disabledState" formControlName="dp1Value" matInput [matDatepicker]="dp1" placeholder="Completely">
+      <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+      <mat-datepicker #dp1></mat-datepicker>
+    </mat-form-field>
+  </mat-card>
+  <mat-card>
+    <mat-form-field>
+      <input matInput #dpInput2 [matDatepicker]="dp2" placeholder="Popup disabled">
+      <mat-datepicker-toggle matSuffix [for]="dp2" disabled></mat-datepicker-toggle>
+      <mat-datepicker #dp2></mat-datepicker>
+    </mat-form-field>
+  </mat-card>
+  <mat-card>
+    <mat-form-field>
+      <input matInput #dpInput3 [matDatepicker]="dp3" placeholder="Input disabled" disabled>
+      <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+      <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+    </mat-form-field>
+  </mat-card>
+  <div>{{dpFrom.value | json}}</div>
+  <button mat-raised-button (click)="change()">change</button>
+</form>
