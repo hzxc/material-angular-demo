@@ -10,6 +10,15 @@ const routes: Routes = [
     path: 'rxjs',
     loadChildren: './rxjs-demo/rxjs-demo.module#RxjsDemoModule',
   },
+  {
+    path: 'checkBox',
+    loadChildren: './check-box/check-box.module#CheckBoxModule',
+  },
+  {
+    path: 'datepicker',
+    loadChildren: './datepicker/datepicker.module#DatepickerModule',
+  },
+
 ];
 
 @NgModule({
