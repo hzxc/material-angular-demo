@@ -18,7 +18,8 @@ import {
   MatSelectModule,
   MatFormFieldModule,
   MatIconRegistry,
-  MatDatepickerModule
+  MatDatepickerModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -41,7 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatSidenavModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     MatProgressBarModule,
@@ -61,7 +63,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatSidenavModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatProgressSpinnerModule
   ],
   declarations: []
 })

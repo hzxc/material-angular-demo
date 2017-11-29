@@ -18,6 +18,11 @@ const routes: Routes = [
     path: 'datepicker',
     loadChildren: './datepicker/datepicker.module#DatepickerModule',
   },
+  {
+    path: 'table',
+    loadChildren: './table/table.module#TableModule',
+  },
+
 
 ];
 
