@@ -32,20 +32,20 @@ export class RxjsDemoComponent implements OnInit {
     const obj2$ = Observable.of<Item>(
       {
         isFree: null,
-        value: "-1",
-        displayText: "- All -",
+        value: '-1',
+        displayText: '- All -',
         isSelected: false
       },
       {
         isFree: null,
-        value: "",
-        displayText: "Not assigned",
+        value: '',
+        displayText: 'Not assigned',
         isSelected: false
       },
       {
         isFree: true,
-        value: "1",
-        displayText: "Standard",
+        value: '1',
+        displayText: 'Standard',
         isSelected: false
       }
     );
@@ -53,26 +53,26 @@ export class RxjsDemoComponent implements OnInit {
       [
         {
           isFree: null,
-          value: "-1",
-          displayText: "- All -",
+          value: '-1',
+          displayText: '- All -',
           isSelected: false
         },
         {
           isFree: null,
-          value: "",
-          displayText: "Not assigned",
+          value: '',
+          displayText: 'Not assigned',
           isSelected: false
         },
         {
           isFree: true,
-          value: "1",
-          displayText: "Standard",
+          value: '1',
+          displayText: 'Standard',
           isSelected: false
         }
       ]
     );
     // obj1$.subscribe(val => console.log(val));
-    obj2$.filter(v => v.value == '1').subscribe(val => console.log(val));
+    obj2$.filter(v => v.value === '1').subscribe(val => console.log(val));
     obj3$.subscribe(val => this.items.push(val));
     console.log(this.items);
   }
@@ -90,9 +90,10 @@ export class Item {
 
   constructor(data?: Item) {
     if (data) {
-      for (var property in data) {
-        if (data.hasOwnProperty(property))
+      for (const property in data) {
+        if (data.hasOwnProperty(property)) {
           (<any>this)[property] = (<any>data)[property];
+        }
       }
     }
   }

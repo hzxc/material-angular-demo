@@ -22,8 +22,10 @@ const routes: Routes = [
     path: 'table',
     loadChildren: './table/table.module#TableModule',
   },
-
-
+  {
+    path: 'chips',
+    loadChildren: './chips/chips.module#ChipsModule',
+  },
 ];
 
 @NgModule({
