@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'chips',
     loadChildren: './chips/chips.module#ChipsModule',
   },
+  {
+    path: 'dialog',
+    loadChildren: './dialog/dialog.module#DialogModule',
+  },
 ];
 
 @NgModule({
