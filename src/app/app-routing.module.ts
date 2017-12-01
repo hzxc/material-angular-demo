@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'dialog',
     loadChildren: './dialog/dialog.module#DialogModule',
   },
+  {
+    path: 'select',
+    loadChildren: './select/select.module#SelectModule',
+  },
 ];
 
 @NgModule({

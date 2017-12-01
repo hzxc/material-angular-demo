@@ -8,13 +8,17 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 export class SimpleComponent implements OnInit {
 
+  private name;
   constructor(
     public dialogRef: MatDialogRef<SimpleComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) { }
+    @Inject(MAT_DIALOG_DATA) public data: any) {
 
-  onNoClick(): void {
-    this.dialogRef.close();
+    this.name = data.name;
   }
+
+  // onNoClick(): void {
+  //   this.dialogRef.close();
+  // }
   ngOnInit() {
   }
 
