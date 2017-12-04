@@ -34,6 +34,10 @@ const routes: Routes = [
     path: 'select',
     loadChildren: './select/select.module#SelectModule',
   },
+  {
+    path: 'progress',
+    loadChildren: './progress/progress.module#ProgressModule',
+  },
 ];
 
 @NgModule({
