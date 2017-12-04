@@ -19,6 +19,7 @@ export class SimpleComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.myControl.setValue('Two');
   }
 
 }
