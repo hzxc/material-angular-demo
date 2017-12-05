@@ -35,8 +35,13 @@ const routes: Routes = [
     loadChildren: './select/select.module#SelectModule',
   },
   {
+<<<<<<< HEAD
     path: 'tabs',
     loadChildren: './tabs/tabs.module#TabsModule',
+=======
+    path: 'progress',
+    loadChildren: './progress/progress.module#ProgressModule',
+>>>>>>> 79768e2e0cb4bb10c79af426d2e31f72c392bf8a
   },
 ];
 

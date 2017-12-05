@@ -21,8 +21,13 @@ import {
   MatDatepickerModule,
   MatProgressSpinnerModule,
   MatChipsModule,
+<<<<<<< HEAD
   MatTabsModule,
+=======
+  MatSliderModule,
+>>>>>>> 79768e2e0cb4bb10c79af426d2e31f72c392bf8a
 } from '@angular/material';
+import {MatRadioModule} from '@angular/material/radio';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -47,7 +52,12 @@ import { HttpClientModule } from '@angular/common/http';
     MatDatepickerModule,
     MatProgressSpinnerModule,
     MatChipsModule,
+<<<<<<< HEAD
     MatTabsModule
+=======
+    MatRadioModule,
+    MatSliderModule
+>>>>>>> 79768e2e0cb4bb10c79af426d2e31f72c392bf8a
   ],
   exports: [
     MatProgressBarModule,
@@ -70,7 +80,12 @@ import { HttpClientModule } from '@angular/common/http';
     MatDatepickerModule,
     MatProgressSpinnerModule,
     MatChipsModule,
+<<<<<<< HEAD
     MatTabsModule
+=======
+    MatRadioModule,
+    MatSliderModule
+>>>>>>> 79768e2e0cb4bb10c79af426d2e31f72c392bf8a
   ],
   declarations: []
 })
