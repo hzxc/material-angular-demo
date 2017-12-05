@@ -20,7 +20,8 @@ import {
   MatIconRegistry,
   MatDatepickerModule,
   MatProgressSpinnerModule,
-  MatChipsModule
+  MatChipsModule,
+  MatTabsModule,
 } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -45,7 +46,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatDatepickerModule,
     MatProgressSpinnerModule,
-    MatChipsModule
+    MatChipsModule,
+    MatTabsModule
   ],
   exports: [
     MatProgressBarModule,
@@ -67,7 +69,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatDatepickerModule,
     MatProgressSpinnerModule,
-    MatChipsModule
+    MatChipsModule,
+    MatTabsModule
   ],
   declarations: []
 })
