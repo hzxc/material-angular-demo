@@ -1,9 +1,21 @@
-<h2 mat-dialog-title>Delete all</h2>
-<mat-dialog-content>Are you sure?
-  <div>{{name}}</div>
+<!-- <h2 mat-dialog-title>Delete all</h2> -->
+<mat-dialog-content fxLayoutAlign="space-evenly center">
+  <div style="text-align:center" color="accent">
+    <!-- <i class="material-icons" style="font-size:7rem;color:#ffd740">warning</i> -->
+    <mat-icon fxFill style="font-size: 7rem;" color="accent">warning</mat-icon>
+    <!-- <mat-icon class="icon-css" color="warn">warning</mat-icon> -->
+    <mat-chip-list>
+    </mat-chip-list>
+    <mat-chip>你确定吗?</mat-chip>
+    <mat-chip style="margin-bottom:1rem;">
+      角色 Test 将被删除，拥有此角色的用户将取消此角色.
+    </mat-chip>
+    <!-- <div style="margin:27px 0px 27px 0px;">角色 Test 将被删除，拥有此角色的用户将取消此角色.</div> -->
+    <!-- <div>{{name}}</div> -->
+  </div>
 </mat-dialog-content>
-<mat-dialog-actions>
-  <button mat-button tabindex="-1" mat-dialog-close>No</button>
+<mat-dialog-actions fxLayoutAlign="space-evenly center">
+  <button mat-raised-button color="primary" tabindex="-1" mat-dialog-close>No</button>
   <!-- Can optionally provide a result for the closing dialog. -->
-  <button mat-button  [mat-dialog-close]="true">Yes</button>
+  <button mat-raised-button color="accent" [mat-dialog-close]="true">Yes</button>
 </mat-dialog-actions>
