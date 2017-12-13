@@ -41,6 +41,10 @@ const routes: Routes = [
   {
     path: 'progress',
     loadChildren: './progress/progress.module#ProgressModule',
+  },
+  {
+    path: 'regExp',
+    loadChildren: './reg-exp/reg-exp.module#RegExpModule',
   }
 ];
 
