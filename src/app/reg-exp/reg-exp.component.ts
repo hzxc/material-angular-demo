@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-reg-exp',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class RegExpComponent implements OnInit {
 
   private msg: string;
+  @ViewChild('ele') ele: ElementRef;
   constructor() { }
 
   ngOnInit() {
@@ -28,6 +30,7 @@ export class RegExpComponent implements OnInit {
   otherTest() {
     const value = undefined;
     const value1 = null;
+    const value2 = '';
     console.log(value ? true : false);
     if (value) {
       console.log(true);
@@ -41,5 +44,15 @@ export class RegExpComponent implements OnInit {
     } else {
       console.log(false);
     }
+    console.log(value2 ? true : false);
+    if (value2) {
+      console.log(true);
+    } else {
+      console.log(false);
+    }
+  }
+
+  elementTest() {
+    $(this.ele.nativeElement).html('123123');
   }
 }
