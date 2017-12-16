@@ -45,7 +45,7 @@ export class SetDisplayValueComponent implements OnInit {
   }
 
   displayFn(user: User): string {
-    return user ? user.name : null;
+    return user ? ' <span class="flag-icon flag-icon-cn"></span>' + user.name : null;
   }
 
 }

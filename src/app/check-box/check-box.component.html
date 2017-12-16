@@ -1,3 +1,30 @@
-<p>
-  check-box works!
-</p>
+<span class="flag-icon flag-icon-de"></span>
+<span class="flag-icon flag-icon-de flag-icon-squared"></span>
+<mat-form-field>
+  <span matPrefix class="flag-icon flag-icon-cn"></span>
+  <mat-select placeholder="Languages">
+    <mat-option *ngFor="let language of languages" [value]="language.name">
+      <span [class]="language.icon"></span>
+      {{ language.displayName }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+  <span matPrefix [class]="languageSelect.selected?.value.icon"></span>
+  <mat-select #languageSelect="matSelect">
+    <mat-select-trigger>{{ languageSelect.selected?.value.displayName}}</mat-select-trigger>
+    <mat-option *ngFor="let language of languages" [value]="language">
+      <span [class]="language.icon"></span>
+      {{ language.displayName }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+  <mat-select placeholder="Favorite food" #foodSelect="matSelect">
+    <mat-select-trigger>{{ foodSelect.selected?.viewValue }}
+    </mat-select-trigger>
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{ food.viewValue }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

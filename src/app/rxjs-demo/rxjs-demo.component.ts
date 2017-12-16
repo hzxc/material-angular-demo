@@ -1,12 +1,19 @@
+import { element } from 'protractor';
 import { Observable } from 'rxjs/Observable';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/from';
+import 'rxjs/add/observable/interval';
+import 'rxjs/add/observable/fromEvent';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/switch';
+import 'rxjs/add/operator/delay';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/first';
 import 'rxjs/add/operator/last';
+import 'rxjs/add/operator/switchMap';
+import { MatButton } from '@angular/material';
 
 @Component({
   selector: 'app-rxjs-demo',
@@ -16,13 +23,25 @@ import 'rxjs/add/operator/last';
 export class RxjsDemoComponent implements OnInit {
 
   items: Array<Item> = new Array();
+  @ViewChild('switchButton') switchButton: MatButton;
 
   constructor() {
 
   }
 
-  ngOnInit() {
+  swithTest() {
+    // var result = clicks.switchMap((ev) => Rx.Observable.interval(1000));
+    // result.subscribe(x => console.log(x));
+  }
 
+  ngOnInit() {
+    console.log(this.switchButton);
+    const clicks = Observable.fromEvent(this.switchButton._elementRef.nativeElement, 'click');
+    // const result = clicks.switchMap((ev) => Observable.interval(1000));
+    const higherOrder = clicks.map((ev) => Observable.interval(1000));
+    const result = higherOrder.switch();
+
+    result.subscribe(x => console.log(x));
   }
 
   trigger() {
@@ -97,4 +116,6 @@ export class Item {
       }
     }
   }
+
+
 }
