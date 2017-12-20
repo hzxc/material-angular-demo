@@ -11,7 +11,7 @@
 </mat-form-field>
 <mat-form-field>
   <span matPrefix [class]="languageSelect.selected?.value.icon"></span>
-  <mat-select #languageSelect="matSelect">
+  <mat-select #languageSelect="matSelect" [(ngModel)]="selectedItem">
     <mat-select-trigger>{{ languageSelect.selected?.value.displayName}}</mat-select-trigger>
     <mat-option *ngFor="let language of languages" [value]="language">
       <span [class]="language.icon"></span>

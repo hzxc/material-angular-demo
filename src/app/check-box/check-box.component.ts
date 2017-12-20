@@ -6,13 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./check-box.component.scss']
 })
 export class CheckBoxComponent implements OnInit {
+
+
+
+
   foods = [
     { value: 'steak-0', viewValue: 'Steak' },
     { value: 'pizza-1', viewValue: 'Pizza' },
     { value: 'tacos-2', viewValue: 'Tacos' }
   ];
 
-  languages = [
+  languages: LanguageDto[] = [
     {
       'name': 'de',
       'displayName': 'Deutsch',
@@ -101,10 +105,29 @@ export class CheckBoxComponent implements OnInit {
       'isDisabled': false,
       'isRightToLeft': false
     }
-  ]
-  constructor() { }
+  ];
+
+  private selectedItem: LanguageDto = new LanguageDto();
+
+  constructor() {
+    this.selectedItem.name = 'zh-CN';
+    this.selectedItem.displayName = '简体中文';
+    this.selectedItem.icon = 'flag-icon flag-icon-cn';
+    this.selectedItem.isDefault = true;
+    this.selectedItem.isDisabled = false;
+    this.selectedItem.isRightToLeft = false;
+  }
 
   ngOnInit() {
   }
 
+}
+
+class LanguageDto {
+  name: string;
+  'displayName': string;
+  'icon': string;
+  'isDefault': boolean;
+  'isDisabled': boolean;
+  'isRightToLeft': boolean;
 }
