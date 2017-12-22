@@ -45,6 +45,10 @@ const routes: Routes = [
   {
     path: 'regExp',
     loadChildren: './reg-exp/reg-exp.module#RegExpModule',
+  },
+  {
+    path: 'menu',
+    loadChildren: './menu/menu.module#MenuModule',
   }
 ];
 

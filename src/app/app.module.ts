@@ -6,6 +6,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { SelectComponent } from './select/select.component';
+import { MatCardModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SelectComponent } from './select/select.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatMomentDateModule
+    MatMomentDateModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
