@@ -49,6 +49,10 @@ const routes: Routes = [
   {
     path: 'menu',
     loadChildren: './menu/menu.module#MenuModule',
+  },
+  {
+    path: 'other',
+    loadChildren: './other/other.module#OtherModule',
   }
 ];
 
