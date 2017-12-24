@@ -38,6 +38,7 @@
     "moment": "^2.19.3",
     "npm": "^5.6.0",
     "rxjs": "^5.5.2",
+    "timeago": "^1.6.1",
     "web-animations-js": "^2.3.1",
     "zone.js": "^0.8.18"
   },
