@@ -31,9 +31,9 @@ export class DatepickerComponent implements OnInit {
     // this.matInputs.forEach(element => {
     //   element.value = moment().startOf('day');
     // });
-    this.matInputs.last.value = moment().startOf('day');
+    this.matInputs.last.value = moment().startOf('day').toString();
 
-    this.matInput.value = moment().startOf('day');
+    this.matInput.value = moment().startOf('day').toString();
     this.matInput.readonly = !this.matInput.readonly;
     this.disabledState = !this.disabledState;
     console.log(this.dpGroup.controls['dp1Value'].value);

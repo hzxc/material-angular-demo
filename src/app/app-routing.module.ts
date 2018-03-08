@@ -53,6 +53,10 @@ const routes: Routes = [
   {
     path: 'other',
     loadChildren: './other/other.module#OtherModule',
+  },
+  {
+    path: 'e-ngx-print-demo',
+    loadChildren: './e-ngx-print-demo/e-ngx-print-demo.module#ENgxPrintDemoModule',
   }
 ];
 
