@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HighChartsDemoComponent } from './high-charts-demo.component';
+import { NgChartDemoComponent } from './ng-chart-demo.component';
 
 const routes: Routes = [
-  { path: '', component: HighChartsDemoComponent }
+  { path: '', component: NgChartDemoComponent }
 ];
 
 @NgModule({
@@ -11,4 +11,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class HighChartsDemoRoutingModule { }
+export class NgChartDemoRoutingModule { }

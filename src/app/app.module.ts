@@ -7,7 +7,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { SelectComponent } from './select/select.component';
 import { MatCardModule } from '@angular/material';
-
+import { ChartModule } from 'angular-highcharts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +19,7 @@ import { MatCardModule } from '@angular/material';
     MatButtonModule,
     MatMomentDateModule,
     MatCardModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

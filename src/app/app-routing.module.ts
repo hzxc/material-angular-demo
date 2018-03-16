@@ -59,8 +59,8 @@ const routes: Routes = [
     loadChildren: './e-ngx-print-demo/e-ngx-print-demo.module#ENgxPrintDemoModule',
   },
   {
-    path: 'high-charts',
-    loadChildren: './high-charts-demo/high-charts-demo.module#HighChartsDemoModule',
+    path: 'charts',
+    loadChildren: './ng-chart-demo/ng-chart-demo.module#NgChartDemoModule',
   }
 ];
 
